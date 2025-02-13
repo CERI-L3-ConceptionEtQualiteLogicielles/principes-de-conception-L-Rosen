@@ -19,8 +19,8 @@ public class Contact {
         return numero;
     }
 
-    public String getInfoContact() {
-        return info.getInfoContact(this,new InfoString());
+    public String getInfoContact(InfoService format) {
+        return info.getInfoContact(this,format);
     }
 
     @Override
