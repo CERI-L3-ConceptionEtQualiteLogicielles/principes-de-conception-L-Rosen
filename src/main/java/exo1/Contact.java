@@ -4,11 +4,11 @@ public class Contact {
     private String nom;
     private String numero;
 
-    private Info info = new Info();
+    private String prenom;
+    private String civilite;
 
-    public Contact(String nom, String numero) {
-        this.nom = nom;
-        this.numero = numero;
+
+    private Contact() {
     }
 
     public String getNom() {
@@ -20,12 +20,43 @@ public class Contact {
     }
 
     public String getInfoContact(InfoService format) {
-        return info.getInfoContact(this,format);
+        return format.getInfoContact(this);
     }
 
     @Override
     public String toString() {
         return "Nom: " + getNom() + ", Numéro: " + getNumero(); //DRY
+    }
+
+    public static  class ContactBuilder{
+        private String nom;
+        private String numero;
+
+        private String prenom;
+        private String civilite;
+
+        public ContactBuilder(String nom, String numero){
+            this.nom = nom;
+            this.numero = numero;
+        }
+
+        public void addPrenom(String prenom){
+            this.prenom = prenom;
+        }
+
+        public void addCivilite(String civilite){
+            this.civilite = civilite;
+        }
+
+        public Contact build(){
+            Contact contact = new Contact();
+            contact.nom = this.nom;
+            contact.numero = this.numero;
+            contact.prenom = this.prenom;
+            contact.civilite = this.civilite;
+
+            return  contact;
+        }
     }
 }
 
