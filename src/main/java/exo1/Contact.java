@@ -4,6 +4,8 @@ public class Contact {
     private String nom;
     private String numero;
 
+    private Info info = new Info();
+
     public Contact(String nom, String numero) {
         this.nom = nom;
         this.numero = numero;
@@ -18,12 +20,12 @@ public class Contact {
     }
 
     public String getInfoContact() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero();
+        return info.getInfoContact(this,new InfoString());
     }
 
     @Override
     public String toString() {
-        return this.getInfoContact(); //DRY
+        return "Nom: " + getNom() + ", Numéro: " + getNumero(); //DRY
     }
 }
 
