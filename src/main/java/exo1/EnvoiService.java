@@ -1,5 +1,5 @@
 package exo1;
 
 public interface EnvoiService {
-    public void envoi(Contact contact,String message);
+    public void envoi(Contact contact,String message,EnvoiService service);
 }
