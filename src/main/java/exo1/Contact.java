@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Contact {
-    private static List<Contact> lesContacts = new ArrayList<>();
     private String nom;
     private String numero;
 
     public Contact(String nom, String numero) {
         this.nom = nom;
         this.numero = numero;
-        lesContacts.add(this);
+        //lesContacts.add(this); C'est a l'annuaire de gérer l'ajout des contacts
     }
 
     public String getNom() {
