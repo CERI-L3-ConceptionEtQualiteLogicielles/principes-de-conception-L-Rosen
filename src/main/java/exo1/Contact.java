@@ -1,8 +1,5 @@
 package exo1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Contact {
     private String nom;
     private String numero;
@@ -10,7 +7,6 @@ public class Contact {
     public Contact(String nom, String numero) {
         this.nom = nom;
         this.numero = numero;
-        //lesContacts.add(this); C'est a l'annuaire de gérer l'ajout des contacts
     }
 
     public String getNom() {
@@ -29,31 +25,5 @@ public class Contact {
     public String toString() {
         return this.getInfoContact(); //DRY
     }
-
-    /*
-    public void afficheContacts() {
-        for (Contact contact : lesContacts) {
-            System.out.println("Nom: " + contact.getNom() + ", Numéro: " + contact.getNumero());
-        }
-    }
-
-
-    public void ajouteContact(Contact contact) {
-        lesContacts.add(contact);
-    }
-
-    public void supprimeContact(Contact contact) {
-        lesContacts.remove(contact);
-    }
-
-     Single responsability la classe contact ne doit pas gérer l'envoi de mail ni la sauvegarde en bdd
-    public void sauvegardeEnBD() {
-        // Logique pour sauvegarder les contacts dans une base de données
-    }
-
-    public void envoiEmail(Contact contact, String message) {
-        // Logique pour envoyer un email
-    }
-     */
 }
 
