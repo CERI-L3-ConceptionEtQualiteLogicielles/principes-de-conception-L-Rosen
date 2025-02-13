@@ -40,6 +40,7 @@ public class Contact implements ContactService {
         }
     }
 
+    /* Single responsability la classe contact ne doit pas gérer l'envoi de mail ni la sauvegarde en bdd
     public void sauvegardeEnBD() {
         // Logique pour sauvegarder les contacts dans une base de données
     }
@@ -47,6 +48,7 @@ public class Contact implements ContactService {
     public void envoiEmail(Contact contact, String message) {
         // Logique pour envoyer un email
     }
+     */
 
     @Override
     public String toString() {
