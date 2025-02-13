@@ -1,7 +1,8 @@
 package exo1;
 
-public class EnvoiSms implements EnvoiService{
+public class EnvoiSms extends Envoi{
 
-    public void envoi(Contact contact, String message, EnvoiService service) {
+    public void envoi(Contact contact, String message) {
+        //Envoi SMS
     }
 }
