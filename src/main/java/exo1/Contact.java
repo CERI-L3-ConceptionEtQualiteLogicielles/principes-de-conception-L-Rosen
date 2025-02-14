@@ -19,13 +19,21 @@ public class Contact {
         return numero;
     }
 
+    public String getPrenom(){
+        return  prenom;
+    }
+
+    public String getCivilite() {
+        return civilite;
+    }
+
     public String getInfoContact(InfoService format) {
         return format.getInfoContact(this);
     }
 
     @Override
     public String toString() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero(); //DRY
+        return "Nom: " + getNom() + ", Prénom: " + getPrenom()  + ", Numéro: " + getNumero() + ", Civilité: " +getCivilite(); //DRY
     }
 
     public static  class ContactBuilder{
